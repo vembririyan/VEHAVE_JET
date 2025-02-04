@@ -1,0 +1,11 @@
+# Enable mod_rewrite (URL rewriting)
+RewriteEngine On
+
+# Set the default index file to index.php
+DirectoryIndex index.php
+
+# Prevent directory listing (no list of files in a directory)
+Options -Indexes
+
+# Clean URLs (Example: http://example.com/about instead of http://example.com/index.php?page=about)
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1 [L,QSA]
