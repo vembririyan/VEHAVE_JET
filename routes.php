@@ -1,10 +1,6 @@
 <?php
-include_once('api/user.php');
+include_once('./api/coreapi.php');
+GET('/get-user',"getUser");
 
-GET('/karyawan',"getKaryawan");
-POST('/jadwal',"getJadwal");
-
-if (empty($content)) {
-    echo json_encode(["status"=>404,"message"=>"Not Found"]);
-    exit;
-}
+echo json_encode(["status"=>404,"message"=>"Not Found"]);
+exit;
